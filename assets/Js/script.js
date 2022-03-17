@@ -48,6 +48,7 @@ var taskFormHandler = function (event) {
     var taskNameInput = document.querySelector("input[name='task-name']").value;
     var taskTypeInput = document.querySelector("select[name='task-type']").value;
     var isEdit = formEl.hasAttribute("data-task-id");
+    console.log("isEdit")
     // PUT THIS BELOW `var isEdit = ...` in `taskFormHandler()`
 
     // has data attribute, so get task id and call function to complete edit process
@@ -77,7 +78,7 @@ var taskFormHandler = function (event) {
     }
     formEl.reset();
     // send it as an argument to createTaskEl
-    createTaskEl(taskDataObj);
+    // createTaskEl(taskDataObj);
 };
 
 var completeEditTask = function (taskName, taskType, taskId) {
